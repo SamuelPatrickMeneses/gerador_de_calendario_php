@@ -44,7 +44,7 @@
         $yar = isset($_GET['yar']) && $_GET['yar'] ? $_GET['yar']: date('Y');
         $yar = intval($yar);
         $wd = date('w',mktime(0,0,0,1,1,$yar));
-        $wd = (intval($wd) + 1) % 7;
+        $wd = intval($wd)  % 7;
         if(($yar % 4) == 0)
             $meses[1][1]++;
         for($i = 0; $i < 12; $i++){

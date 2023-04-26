@@ -47,12 +47,14 @@
                     $lestWick = ($inSet % 7);
                     if($lestWick)
                         $lestWick = printRow($day,0,--$lestWick);
-                    return ($lestWick + 1) % 7;
+                   
                 ?>
             </tbody>
         </table>
 
-<?php };?>
+<?php 
+     return ($lestWick + 1) % 7;
+};?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

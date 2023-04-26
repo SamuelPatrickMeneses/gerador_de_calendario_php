@@ -1,0 +1,11 @@
+version: '2.0'
+
+services:
+
+  app:
+    image: sschonss/calendar_php:23.04.25.01
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 8080:80
+    working_dir: /var/www/html

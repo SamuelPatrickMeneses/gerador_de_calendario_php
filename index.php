@@ -76,7 +76,7 @@
 <body>
 <form action="/" method="get">
     <label for="yar">ano</label>
-    <input type="number" name="yar" id="yar">
+    <input type="number" min="1970" name="yar" id="yar">
     <input type="submit" value="gerar">
 </form>
     <?php 

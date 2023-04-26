@@ -74,9 +74,9 @@
     </style>
 </head>
 <body>
-<form action="propertView.php" method="get">
+<form action="/" method="get">
     <label for="yar">ano</label>
-    <input type="text" name="yar" id="yar">
+    <input type="number" name="yar" id="yar">
     <input type="submit" value="gerar">
 </form>
     <?php 

@@ -94,7 +94,7 @@
             array('novembro',30),
             array('dezembro',31)
         );
-        $yar = isset($_GET['yar']) and $_GET['yar'] ? $_GET['yar']: date('Y');
+        $yar = isset($_GET['yar']) && $_GET['yar'] ? $_GET['yar']: date('Y');
         $yar = intval($yar);
         $wd = date('w',mktime(0,0,0,1,1,$yar));
         $wd = (intval($wd) + 1) % 7;

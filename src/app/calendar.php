@@ -13,7 +13,7 @@
 
 function printMes($start,$end,$name){ 
     echo '<div class="text-center bg-orange-200 rounded-md">
-            <h4 >'.$name.'</h4>
+            <h4 class="text-2xl font-sans py-2">'.$name.'</h4>
             <div class=" bg-orange-400 rounded-md pt-6 h-full">
                 <table class="w-full text-lg">
                     <thead class="font-bold">

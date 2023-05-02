@@ -1,0 +1,34 @@
+
+@keyframes vento {
+    from{
+        background-position: 0% top;
+    }
+    to{
+        background-position: 300% top;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+body.skay{
+    padding-bottom: 3em;
+    padding-top: 7em;
+    background-image: url("/assets/img/skay.png"),  linear-gradient(to bottom, #1e40af 40%, #93c5fd 90%);
+    background-repeat: repeat;
+    background-size: 75%;
+    background-position: top left;
+    animation-duration: 40s;
+    animation-name: vento;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

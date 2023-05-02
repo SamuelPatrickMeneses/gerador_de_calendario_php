@@ -8,14 +8,13 @@
         }
     ],
     "scripts": {
-        "run":["env AUTOLOAD=$(pwd)/vendor/autoload.php $(cat .env) php -S localhost:8080 -t ./src/public"],
+        "run":["env $(cat .env) RAIS=$(pwd)  php -S localhost:8080 -t ./src/public"],
         "build-css":["npx tailwind -o ./src/public/assets/css/tailwind.css"],
-        "build-css-w":["npx tailwind -o ./src/public/assets/css/tailwind.css -w"],
         "build": [
             "npm install",
-            "composer install",
             "composer dump-autoload",
-            "npx tailwind -o ./src/public/assets/css/tailwind.css"
+            "npx tailwind -o ./src/public/assets/css/tailwind.css",
+            "composer install"
         ]
     },
 
@@ -24,6 +23,8 @@
         "psr-4": {
             "app\\":"src/"
         },
-        "files": ["src/app/calendar.php"]
+        "files": ["src/app/calendar.php",
+                  "src/app/controllers/homeController.php"
+                ]
     }
 }

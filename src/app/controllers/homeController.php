@@ -17,8 +17,13 @@ function homeController(){
     array('novembro',30),
     array('dezembro',31)
     );
-    $yar = isset($_GET['yar']) && $_GET['yar'] ? $_GET['yar']: date('Y');
-    $yar = intval($yar);
+    $yar = validYar($_GET['yar']);
+    $invalid = false;
+    if(!$yar){
+        $yar = intval(date('Y'));
+        if(isset($_GET['yar']))
+            $invalid = $_GET['yar'];
+    }
     $wd = date('w',mktime(0,0,0,1,1,$yar));
     $wd = intval($wd)  % 7;
     if(($yar % 4) == 0)

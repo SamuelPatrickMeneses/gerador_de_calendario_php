@@ -7,6 +7,14 @@
         background-position: 300% top;
     }
 }
+@keyframes timeout {
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -31,4 +39,22 @@ body.skay{
     animation-direction: normal;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+div.loadbar{
+    position: relative;
+}
+
+div.loadbar:before{
+    background-color: rgb(185, 28, 0);
+    content:'';
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+    animation-name: timeout;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    border-radius: 2px;
 }
